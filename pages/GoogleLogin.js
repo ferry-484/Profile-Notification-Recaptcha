@@ -12,7 +12,7 @@ function SocialLogin() {
   };
 
   const responseFacebook = (response) => {
-    console.log(response);
+    console.log(response);  
   };
 
   return (

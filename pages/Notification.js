@@ -12,7 +12,7 @@ import Link from '@material-ui/core/Link';
 const useStyles = makeStyles((theme) => ({
   root: { 
     flexGrow: 1,
-  },
+  },   
 
   menuButton: {
     marginRight: theme.spacing(2),
@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
   notification: {
     display: "flex", 
-    margin: theme.spacing(8),
     size: '30px',
 }
 
@@ -42,17 +41,11 @@ export default function Notification() {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
   
-    // const handleChange = (event) => {
-    //   setAuth(event.target.checked);
-    // };
   
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
     };
   
-    // const handleChange = (event) => {
-    //   setAnchorEl(event.currentTarget);
-    // };
   
     const preventDefault = 
     (event) => 
@@ -103,7 +96,8 @@ export default function Notification() {
         {/* <Button className={classes.button} variant="outlined" color="primary">
          Show More
           </Button> */}
-          <Link href="#" className={classes.notification} onClick={preventDefault}>
+          <Link href="#" className={classes.notification} style={{ margin: '10px 64px'}}
+           onClick={preventDefault}>
         Show More
       </Link>
           <Divider />

@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { makeStyles } from '@material-ui/core/styles';
 import swal from "sweetalert";
+import Typography from '@material-ui/core/Typography';
 import { Button, TextField, FormHelperText } from "@material-ui/core";
 
+const useStyles = makeStyles((theme) => ({
+  typography: {
+    padding: theme.spacing(2),
+  },
+}));
+
 function Recaptcha() {
+  const classes = useStyles();
   const [captchaValue, setCaptchaValue] = useState("");
   const [helperText, setHelperText] = useState("");
   const [userDetails, setUserDetails] = useState({
@@ -39,6 +48,10 @@ function Recaptcha() {
 
   return (
     <div>
+      <Typography className={classes.typography} 
+       gutterBottom variant="h5" component="h2">
+     Recaptcha
+    </Typography>
       <form>
         <TextField
           label="Firstname"
